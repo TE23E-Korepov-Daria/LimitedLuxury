@@ -21,3 +21,91 @@ header {
     place-items: center;
     display: flex;
 }
+
+
+/* Menu and Cart button styling */
+#cart-button, #menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Sidebar menu styling */
+#sidebar {
+    position: fixed;
+    left: -250px; 
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #8c1010;
+    color: white;
+    padding-top: 2rem;
+    transition: left 0.3s; /* Smooth sliding effect */
+}
+
+/* Sidebar menu items */
+#sidebar ul li {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Sidebar menu links */
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Button to open sidebar */
+#open-menu {
+    background: #8c1010;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+
+/* Main content section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Product grid */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Product styling */
+.product {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+/* Product images */
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Add to cart button */
+.add-to-cart {
+    background: #8c1010;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
