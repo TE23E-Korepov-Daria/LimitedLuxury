@@ -13,3 +13,14 @@ function closeSidebar() {
 
 // Add event listener to the close button
 document.getElementById('close-sidebar').addEventListener('click', closeSidebar);
+
+
+let cartCount = 0; // Keeps track of items in the cart
+
+// Add event listener to all 'Add to Cart' buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+        cartCount++; // Increment cart count
+        document.getElementById('cart-count').textContent = cartCount; // Update cart display
+    });
+});
