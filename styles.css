@@ -1,0 +1,23 @@
+/* General styling for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f1d5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header section styling with logo, with navigation and cart button */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #8c1010;
+    color: #f4f1d5;
+}
+
+#Logo {
+    place-items: center;
+    display: flex;
+}
