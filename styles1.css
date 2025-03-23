@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1d5;
+}
+/* Header section styling with logo, with navigation and cart button */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #8c1010;
+    color: #f4f1d5;
+}
+
+#Logo {
+    place-items: center;
+    display: flex;
+}
+
+
+/* Menu and Cart button styling */
+#cart-button, #menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Sidebar menu styling */
+#sidebar {
+    position: fixed;
+    left: -250px; 
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #8c1010;
+    color: white;
+    padding-top: 2rem;
+    transition: left 0.3s; /* Smooth sliding effect */
+}
+
+/* Sidebar menu items */
+#sidebar ul li {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Sidebar menu links */
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Button to open sidebar */
+#open-menu {
+    background: #8c1010;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.product-details {
+    flex: 1;
+}
+.product-details h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+.product-details p {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+.price {
+    font-size: 1.5rem;
+    color: #a6121e;
+    margin: 1rem 0;
+}
+.buy-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #971616;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.buy-button:hover {
+    background-color: #8c1010;
+}
