@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,22 @@
     <link rel="stylesheet" href="contact.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="limitedluxurylogo.png" alt="Limited Luxury Logo"> <!-- Replace with the actual logo path -->
+        <!-- Header Section -->
+        <header>
+            <button id="myButton" class="popup-button">Show Menu</button>
+            <img id="Logo" src="/img/limitedluxurylogo.2.png">
+        </header>
+    
+        <!-- Popup Menu -->
+        <div id="Popup" class="popup">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Settings</a>
         </div>
-        <nav class="sidebar-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <!-- Main Content -->
     <main>
-        <h1>Contact Us</h1>
-        <form action="process_contact.php" method="POST">
+        <h1>Contact Us</h1>>
             <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>

@@ -20,11 +20,12 @@ header {
 #Logo {
     place-items: center;
     display: flex;
+    width: 300px;
+    height: auto;
 }
 
-
 /* Menu and Cart button styling */
-#cart-button, #menu-toggle {
+#cart-button {
     background: none;
     border: none;
     color: white;
@@ -32,41 +33,53 @@ header {
     cursor: pointer;
 }
 
-/* Sidebar menu styling */
-#sidebar {
-    position: fixed;
-    left: -250px; 
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #8c1010;
-    color: white;
-    padding-top: 2rem;
-    transition: left 0.3s; /* Smooth sliding effect */
+/* Base styles for the button and popup */
+.popup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f4f1d5; /* Green */
+    color: #680c0c;
+    border: none;
+    border-radius: 5px;
 }
 
-/* Sidebar menu items */
-#sidebar ul li {
-    padding: 1rem;
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place when scrolling */
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Dark background */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10; /* Sit on top of everything */
+    border-radius: 5px;
+}
+
+/* Styles for the links within the popup */
+.popup a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
     text-align: center;
 }
 
-/* Sidebar menu links */
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
+.popup a:hover {
+    background-color: #555; /* Darker hover */
 }
 
-/* Button to open sidebar */
-#open-menu {
-    background: #8c1010;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: fixed;
-    left: 10px;
-    top: 10px;
+/* Show the popup when the show class is applied */
+.popup.show {
+    display: block;
+}
+
+/* Optional: Add an arrow indicator */
+.popup-button::after {
+    content: "▼"; /* Downward arrow */
+    margin-left: 5px;
+    font-size: 0.8em;
 }
 
 

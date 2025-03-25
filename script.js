@@ -1,18 +1,21 @@
-//Sidebar menu toggle
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    let sidebar = document.getElementById('sidebar');
-    // Toggle sidebar visibility
-    sidebar.style.left = (sidebar.style.left === '0px') ? '-250px' : '0px';
-});
+// Get references to the button and the popup
+const myButton = document.getElementById("myButton");
+const myPopup = document.getElementById("myPopup");
 
-// Function to close the sidebar
-function closeSidebar() {
-    let sidebar = document.getElementById('sidebar');
-    sidebar.style.left = '-250px'; // Hide the sidebar
+// Function to toggle the popup's visibility
+function togglePopup() {
+    myPopup.classList.toggle("show");
 }
 
-// Add event listener to the close button
-document.getElementById('close-sidebar').addEventListener('click', closeSidebar);
+// Event listener for the button click
+myButton.addEventListener("click", togglePopup);
+
+// Close the popup if the user clicks outside of it
+window.addEventListener("click", (event) => {
+    if (!myPopup.contains(event.target) && event.target !== myButton) {
+        myPopup.classList.remove("show");
+    }
+});
 
 
 let cartCount = 0; // Keeps track of items in the cart
