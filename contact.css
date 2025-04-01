@@ -1,26 +1,30 @@
-/* General Styles */
+/* General styling for body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f1d5;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Header */
+/* Header section styling with logo, with navigation and cart button */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #8c1010;
+    color: #f4f1d5;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+#Logo {
+    place-items: center;
+    display: flex;
+    width: 300px;
+    height: auto;
 }
 
-/* Contact Form Section */
+/* Contact Form Section
 .contact-section {
     max-width: 800px;
     margin: 50px auto;
@@ -83,14 +87,14 @@ form button {
 
 form button:hover {
     background-color: #555;
-}
+} */
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #8c1010;
+    color: #f4f1d5;
     margin-top: 50px;
 }
 

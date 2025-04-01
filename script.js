@@ -1,6 +1,6 @@
 // Get references to the button and the popup
 const myButton = document.getElementById("myButton");
-const myPopup = document.getElementById("myPopup");
+const myPopup = document.getElementById("Popup");
 
 // Function to toggle the popup's visibility
 function togglePopup() {
@@ -16,6 +16,9 @@ window.addEventListener("click", (event) => {
         myPopup.classList.remove("show");
     }
 });
+
+
+
 
 
 let cartCount = 0; // Keeps track of items in the cart
