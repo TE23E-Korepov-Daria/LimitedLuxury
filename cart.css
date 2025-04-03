@@ -20,7 +20,7 @@ header {
 #Logo {
     place-items: center;
     display: flex;
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
@@ -128,4 +128,8 @@ nav a {
     font-weight: bold;
     text-align: right;
     margin-top: 20px;
+}
+
+h2, h3 {
+    color: #f4f1d5;
 }

@@ -1,32 +1,65 @@
-// Get references to the button and the popup
-const myButton = document.getElementById("myButton");
-const myPopup = document.getElementById("Popup");
+// Hämta referenser till knappen och popup-elementet
+const myButton = document.getElementById("myButton"); // Hämtar HTML-elementet med id "myButton" (knappen).
+const myPopup = document.getElementById("Popup");     // Hämtar HTML-elementet med id "Popup" (popup-fönstret).
 
-// Function to toggle the popup's visibility
+// Funktion för att växla popup-fönstrets synlighet
 function togglePopup() {
-    myPopup.classList.toggle("show");
+    myPopup.classList.toggle("show"); // Lägger till eller tar bort klassen "show" från popup-elementet.
+    // Klassen "show" används i CSSen för att styra popup-fönstrets synlighet.
 }
 
-// Event listener for the button click
-myButton.addEventListener("click", togglePopup);
+// Lägg till en event-lyssnare för klick på knappen
+myButton.addEventListener("click", togglePopup); 
+// När användaren klickar på knappen körs funktionen `togglePopup`, vilket visar eller döljer popup-fönstret.
 
-// Close the popup if the user clicks outside of it
+// Stäng popup-fönstret om användaren klickar utanför det
 window.addEventListener("click", (event) => {
     if (!myPopup.contains(event.target) && event.target !== myButton) {
-        myPopup.classList.remove("show");
+        // Kontrollera om det klickade elementet inte är en del av popup-fönstret och inte heller knappen.
+        myPopup.classList.remove("show"); // Om villkoret uppfylls, ta bort klassen "show" för att dölja popup-fönstret.
     }
 });
 
 
 
 
+let cartCount = 0; // Variabel som håller reda på antalet varor i kundvagnen. Börjar på 0.
 
-let cartCount = 0; // Keeps track of items in the cart
-
-// Add event listener to all 'Add to Cart' buttons
+// Lägg till en eventlyssnare på alla knappar med klassen 'add-to-cart'
 document.querySelectorAll('.add-to-cart').forEach(button => {
+    // För varje knapp, lägg till en 'click'-händelse
     button.addEventListener('click', function () {
-        cartCount++; // Increment cart count
-        document.getElementById('cart-count').textContent = cartCount; // Update cart display
+        cartCount++; // Öka antalet varor i kundvagnen med 1
+        document.getElementById('cart-count').textContent = cartCount; // Uppdatera texten i elementet med id 'cart-count' för att visa det nya antalet
     });
 });
+
+
+
+
+
+
+// Funktion för att visa kundvagnens innehåll
+function showCartContents() {
+    // Hämtar kundvagnens innehåll från localStorage och omvandlar det från JSON-format till en JavaScript-array.
+    // Om det inte finns något i localStorage, används en tom array som standard.
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Om kundvagnen är tom (dvs. arrayen har inga element), visas ett meddelande och funktionen avslutas.
+    if (cart.length === 0) {
+        alert("Din kundvagn är tom.");
+        return;
+    }
+
+    // Skapar en sträng som ska innehålla detaljer om kundvagnens innehåll.
+    let cartDetails = "Din kundvagn innehåller:\n";
+
+    // Itererar över varje objekt i kundvagnen och lägger till information om produkten i strängen.
+    cart.forEach(item => {
+        // Lägger till produktens namn och pris i strängen. Priset formateras med `toLocaleString()` för att visa det på ett läsbart sätt.
+        cartDetails += `- ${item.productName} (${item.price.toLocaleString()} $)\n`;
+    });
+
+    // Visar en popup (alert) med kundvagnens innehåll.
+    alert(cartDetails);
+}

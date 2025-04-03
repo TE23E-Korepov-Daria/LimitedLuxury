@@ -20,7 +20,7 @@ header {
 #Logo {
     place-items: center;
     display: flex;
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
