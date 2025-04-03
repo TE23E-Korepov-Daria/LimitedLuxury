@@ -24,53 +24,57 @@ header {
     height: auto;
 }
 
-/* Base styles for the button and popup */
 .popup-button {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Padding runt knappen/Stilar en knapp med utfyllnad för avstånd */
     font-size: 16px;
-    cursor: pointer;
-    background-color: #f4f1d5; /* Green */
-    color: #680c0c;
-    border: none;
+    background-color: #f4f1d5; 
+    color: #5c0c0c;
+    border: none; 
     border-radius: 5px;
+    /* Designad för att användas som en trigger för popup-fönster eller liknande interaktiva element. */
 }
 
 .popup {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place when scrolling */
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333; /* Dark background */
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 10; /* Sit on top of everything */
-    border-radius: 5px;
-}
+    top: 90px; /* Position from the top */
+    padding: 10px; /* Padding around the popup */
+    background-color: #811010;
+    min-width: 160px; /* Minimum width of the popup */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Shadow effect */
+    border-radius: 5px; /* Rounded corners */
+}  
 
 /* Styles for the links within the popup */
 .popup a {
-    color: white;
-    padding: 12px 16px;
+    color: #f4f1d5; 
+    padding: 12px 16px; /* Padding around the text (distans mellan) */ 
     text-decoration: none;
     display: block;
     text-align: center;
 }
 
 .popup a:hover {
-    background-color: #555; /* Darker hover */
+    background-color: #700c0c; /* ljusare hover */
 }
 
-/* Show the popup when the show class is applied */
+/* Visar popupen när klassen "show" är tillagd */
 .popup.show {
-    display: block;
+    display: block; /* Show the popup when the class is applied. När klassen show är tillagd på ett element med klassen popup, ändras dess display-egenskap till block. Detta gör att elementet blir synligt och tar upp plats i layouten. */
 }
 
-/* Optional: Add an arrow indicator */
+/* 
+Beskrivning:
+Denna CSS-regel lägger till en nedåtriktad pilindikator (▼) till element med klassen `popup-button` 
+genom att använda pseudo-elementet `::after`. Pilen är stylad med en liten marginal till vänster 
+och en reducerad teckenstorlek för bättre visuell anpassning.
+
+
+/* Valfritt: Lägg till en pilindikator */
 .popup-button::after {
-    content: "▼"; /* Downward arrow */
-    margin-left: 5px;
-    font-size: 0.8em;
+    content: "▼"; /* Anger texten eller symbolen som ska visas */ 
+    margin-left: 5px; /* Lägger till avstånd till vänster om pilen för separation från knapptexten. */
+    font-size: 0.8em; /* Pilens storlek */
 }
 
 

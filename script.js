@@ -33,33 +33,3 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         document.getElementById('cart-count').textContent = cartCount; // Uppdatera texten i elementet med id 'cart-count' för att visa det nya antalet
     });
 });
-
-
-
-
-
-
-// Funktion för att visa kundvagnens innehåll
-function showCartContents() {
-    // Hämtar kundvagnens innehåll från localStorage och omvandlar det från JSON-format till en JavaScript-array.
-    // Om det inte finns något i localStorage, används en tom array som standard.
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Om kundvagnen är tom (dvs. arrayen har inga element), visas ett meddelande och funktionen avslutas.
-    if (cart.length === 0) {
-        alert("Din kundvagn är tom.");
-        return;
-    }
-
-    // Skapar en sträng som ska innehålla detaljer om kundvagnens innehåll.
-    let cartDetails = "Din kundvagn innehåller:\n";
-
-    // Itererar över varje objekt i kundvagnen och lägger till information om produkten i strängen.
-    cart.forEach(item => {
-        // Lägger till produktens namn och pris i strängen. Priset formateras med `toLocaleString()` för att visa det på ett läsbart sätt.
-        cartDetails += `- ${item.productName} (${item.price.toLocaleString()} $)\n`;
-    });
-
-    // Visar en popup (alert) med kundvagnens innehåll.
-    alert(cartDetails);
-}
